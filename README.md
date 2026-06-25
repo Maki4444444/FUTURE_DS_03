@@ -63,8 +63,8 @@ marketing-funnel-analysis/
 |------|----------|--------|
 | 1 | Project Setup | Done |
 | 2 | Data Loading & First Look | Done |
-| 3 | Data Cleaning | In Progress |
-| 4 | Funnel Metrics | Pending |
+| 3 | Data Cleaning | Done |
+| 4 | Funnel Metrics | In Progress |
 | 5 | Segmentation Analysis | Pending |
 | 6 | Visualizations | Pending |
 | 7 | Insights & Recommendations | Pending |
@@ -76,7 +76,13 @@ marketing-funnel-analysis/
 - Not converted (no): **36,548**
 - Overall conversion rate: **11.27%**
 
----
+### After Cleaning:
+- Dropped `default` column (too many unknowns)
+- Encoded target column `y` → `y_binary` (0/1)
+- Created `age_group` column → largest segment is **26-35 (14,847 people)**
+- Created `campaign_bucket` for contact intensity analysis
+- Final shape: **41,188 rows × 23 columns**
+- Nulls remaining: **0**
 
 ## Author
 - **Name:** Meklit Tensae
