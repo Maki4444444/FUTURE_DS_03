@@ -49,11 +49,45 @@ marketing-funnel-analysis/
 
 │   └── 06_insights.ipynb          # Final insights & recommendations
 
-├── outputs/                       # Saved charts and reports
+├── outputs/
+
+│   ├── 01_funnel_chart.png
+
+│   ├── 02_channel_conversion.png
+
+│   ├── 03_job_conversion.png
+
+│   ├── 04_age_conversion.png
+
+│   ├── 05_month_conversion.png
+
+│   ├── 06_campaign_intensity.png
+
+│   ├── 07_previous_outcome.png
+
+│   ├── 08_heatmap_job_channel.png
+
+│   ├── funnel_summary.csv
+
+│   ├── channel_conversion.csv
+
+│   ├── segment_job.csv
+
+│   ├── segment_education.csv
+
+│   ├── segment_age.csv
+
+│   ├── segment_month.csv
+
+│   ├── segment_day.csv
+
+│   ├── segment_poutcome.csv
+
+│   └── recommendations_summary.csv
 
 ├── requirements.txt               # Python dependencies
 
-└── README.md                      # Project documentation
+└── README.md                      # Project documentation                      # Saved charts and reports
 
 
 
@@ -65,18 +99,20 @@ marketing-funnel-analysis/
 | 2 | Data Loading & First Look | Done |
 | 3 | Data Cleaning | Done |
 | 4 | Funnel Metrics | Done |
-| 5 | Segmentation Analysis | In Progress |
-| 6 | Visualizations | Pending |
-| 7 | Insights & Recommendations | Pending |
+| 5 | Segmentation Analysis | Done |
+| 6 | Visualizations | Done |
+| 7 | Insights & Recommendations | Done |
 
 
-## Key Findings So Far
+## Key Findings
+
+### Data Overview
 - Total contacts: **41,188**
 - Converted (yes): **4,640**
 - Not converted (no): **36,548**
 - Overall conversion rate: **11.27%**
 
-### After Cleaning:
+### After Cleaning
 - Dropped `default` column (too many unknowns)
 - Encoded target column `y` → `y_binary` (0/1)
 - Created `age_group` column → largest segment is **26-35 (14,847 people)**
@@ -85,12 +121,21 @@ marketing-funnel-analysis/
 - Nulls remaining: **0**
 
 ### Funnel Stage Metrics
-| Stage | Count | Conversion % |
-|-------|-------|--------------|
-| 1. Total Contacts | 41,188 | 100% |
-| 2. Previously Contacted | 5,625 | 13.66% |
-| 3. Engaged (duration > 0) | 41,184 | 99.99% |
-| 4. Converted | 4,640 | 11.27% |
+| Stage | Count | Conversion % | Drop-off % |
+|-------|-------|--------------|------------|
+| 1. Total Contacts | 41,188 | 100% | — |
+| 2. Previously Contacted | 5,625 | 13.66% | 86.34% |
+| 3. Engaged (duration > 0) | 41,184 | 99.99% | 0.01% |
+| 4. Converted | 4,640 | 11.27% | 88.73% |
+
+### Funnel Waste Analysis
+- Cold contacts (no prior history): **35,563**
+- Cold contacts wasted: **32,422**
+- Cold contact waste rate: **91.2%**
+- If only warm leads contacted: conversion jumps to **65.1%**
+
+> **32,422 contacts were essentially wasted on cold outreach**
+> the single biggest opportunity for improvement
 
 ### Conversion by Channel
 | Channel | Converted | Total | Conversion Rate |
@@ -121,12 +166,22 @@ marketing-funnel-analysis/
 | Admin | 12.97% |
 | Blue-collar | 6.89% (lowest) |
 
+#### By Age Group
+| Age Group | Conversion Rate |
+|-----------|----------------|
+| 65+ | **46.85%** |
+| 17-25 | 22.99% |
+| 56-65 | 20.25% |
+| 26-35 | 8.91% (lowest) |
+
 #### By Previous Campaign Outcome
 | Outcome | Conversion Rate |
 |---------|----------------|
 | Success | **65.11%** |
 | Failure | 14.23% |
 | No previous contact | 8.83% |
+
+> Customers with a previous successful campaign are **7.4x more likely** to convert
 
 #### Best Performing Segments
 | Segment | Best Group | Conversion Rate |
@@ -137,21 +192,34 @@ marketing-funnel-analysis/
 | Day | Thursday | 12.12% |
 | Prev. Outcome | Success | **65.11%** |
 
-> Customers with a previous successful campaign are **7.4x more likely** to convert than new contacts
 
-### Visualizations Produced
-| # | Chart | Type | File |
-|---|-------|------|------|
-| 1 | Overall Funnel Drop-off | Plotly Funnel | 01_funnel_chart.png |
-| 2 | Conversion by Channel | Plotly Bar | 02_channel_conversion.png |
-| 3 | Conversion by Job Type | Plotly Horizontal Bar | 03_job_conversion.png |
-| 4 | Conversion by Age Group | Plotly Bar | 04_age_conversion.png |
-| 5 | Conversion by Month | Plotly Line | 05_month_conversion.png |
-| 6 | Campaign Intensity Impact | Plotly Bar | 06_campaign_intensity.png |
-| 7 | Previous Outcome Impact | Plotly Bar | 07_previous_outcome.png |
-| 8 | Job × Channel Heatmap | Seaborn Heatmap | 08_heatmap_job_channel.png |
+## Actionable Recommendations
+
+| # | Recommendation | Current Rate | Target Rate | Priority |
+|---|---------------|-------------|-------------|----------|
+| 1 | Prioritize warm leads over cold outreach | 8.83% | 65.11% | High |
+| 2 | Switch budget from telephone to cellular | 5.23% | 14.74% | High |
+| 3 | Cap contacts at 3 per lead | 5.49% | 13.04% | Medium |
+| 4 | Target 65+ and student segments | 6.89% | 46.85% | Medium |
+| 5 | Time campaigns to March/Sep/Oct | Low in May | 50.55% | Quick Win |
+
+
+
+## Visualizations
+
+| # | Chart | File |
+|---|-------|------|
+| 1 | Overall Funnel Drop-off | 01_funnel_chart.png |
+| 2 | Conversion by Channel | 02_channel_conversion.png |
+| 3 | Conversion by Job Type | 03_job_conversion.png |
+| 4 | Conversion by Age Group | 04_age_conversion.png |
+| 5 | Conversion by Month | 05_month_conversion.png |
+| 6 | Campaign Intensity Impact | 06_campaign_intensity.png |
+| 7 | Previous Outcome Impact | 07_previous_outcome.png |
+| 8 | Job × Channel Heatmap | 08_heatmap_job_channel.png |
+
 
 ## Author
-- **Name:** Meklit Tensae
+- **Name:** Your Name
 - **Internship:** Future Interns: Data Science & Analytics Track (2026)
-- **LinkedIn:** 
+
