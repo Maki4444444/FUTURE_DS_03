@@ -64,8 +64,8 @@ marketing-funnel-analysis/
 | 1 | Project Setup | Done |
 | 2 | Data Loading & First Look | Done |
 | 3 | Data Cleaning | Done |
-| 4 | Funnel Metrics | In Progress |
-| 5 | Segmentation Analysis | Pending |
+| 4 | Funnel Metrics | Done |
+| 5 | Segmentation Analysis | In Progress |
 | 6 | Visualizations | Pending |
 | 7 | Insights & Recommendations | Pending |
 
@@ -83,6 +83,32 @@ marketing-funnel-analysis/
 - Created `campaign_bucket` for contact intensity analysis
 - Final shape: **41,188 rows × 23 columns**
 - Nulls remaining: **0**
+
+### Funnel Stage Metrics
+| Stage | Count | Conversion % |
+|-------|-------|--------------|
+| 1. Total Contacts | 41,188 | 100% |
+| 2. Previously Contacted | 5,625 | 13.66% |
+| 3. Engaged (duration > 0) | 41,184 | 99.99% |
+| 4. Converted | 4,640 | 11.27% |
+
+### Conversion by Channel
+| Channel | Converted | Total | Conversion Rate |
+|---------|-----------|-------|-----------------|
+| Cellular | 3,853 | 26,144 | **14.74%** |
+| Telephone | 787 | 15,044 | 5.23% |
+
+> Cellular is **2.8x more effective** than telephone outreach
+
+### Conversion by Campaign Intensity
+| Contacts Made | Conversion Rate |
+|---------------|-----------------|
+| 1 contact | **13.04%** |
+| 2-3 contacts | 11.22% |
+| 4-5 contacts | 8.68% |
+| 6+ contacts | 5.49% |
+
+> More calls = lower conversion. Quality over quantity wins.
 
 ## Author
 - **Name:** Meklit Tensae
