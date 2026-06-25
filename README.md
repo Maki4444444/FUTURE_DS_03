@@ -140,16 +140,16 @@ marketing-funnel-analysis/
 > Customers with a previous successful campaign are **7.4x more likely** to convert than new contacts
 
 ### Visualizations Produced
-| # | Chart | Type |
-|---|-------|------|
-| 1 | Overall Funnel Drop-off | Plotly Funnel |
-| 2 | Conversion by Channel | Plotly Bar |
-| 3 | Conversion by Job Type | Plotly Horizontal Bar |
-| 4 | Conversion by Age Group | Plotly Bar |
-| 5 | Conversion by Month | Plotly Line |
-| 6 | Campaign Intensity Impact | Plotly Bar |
-| 7 | Previous Outcome Impact | Plotly Bar |
-| 8 | Job × Channel Heatmap | Seaborn Heatmap |
+| # | Chart | Type | File |
+|---|-------|------|------|
+| 1 | Overall Funnel Drop-off | Plotly Funnel | 01_funnel_chart.png |
+| 2 | Conversion by Channel | Plotly Bar | 02_channel_conversion.png |
+| 3 | Conversion by Job Type | Plotly Horizontal Bar | 03_job_conversion.png |
+| 4 | Conversion by Age Group | Plotly Bar | 04_age_conversion.png |
+| 5 | Conversion by Month | Plotly Line | 05_month_conversion.png |
+| 6 | Campaign Intensity Impact | Plotly Bar | 06_campaign_intensity.png |
+| 7 | Previous Outcome Impact | Plotly Bar | 07_previous_outcome.png |
+| 8 | Job × Channel Heatmap | Seaborn Heatmap | 08_heatmap_job_channel.png |
 
 ## Author
 - **Name:** Meklit Tensae
