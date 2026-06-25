@@ -110,6 +110,35 @@ marketing-funnel-analysis/
 
 > More calls = lower conversion. Quality over quantity wins.
 
+### Segmentation Analysis
+
+#### By Job Type
+| Job | Conversion Rate |
+|-----|----------------|
+| Student | **31.43%** |
+| Retired | **25.23%** |
+| Unemployed | 14.20% |
+| Admin | 12.97% |
+| Blue-collar | 6.89% (lowest) |
+
+#### By Previous Campaign Outcome
+| Outcome | Conversion Rate |
+|---------|----------------|
+| Success | **65.11%** |
+| Failure | 14.23% |
+| No previous contact | 8.83% |
+
+#### Best Performing Segments
+| Segment | Best Group | Conversion Rate |
+|---------|-----------|----------------|
+| Job | Student | **31.43%** |
+| Age Group | 65+ | **46.85%** |
+| Month | March | **50.55%** |
+| Day | Thursday | 12.12% |
+| Prev. Outcome | Success | **65.11%** |
+
+> Customers with a previous successful campaign are **7.4x more likely** to convert than new contacts
+
 ## Author
 - **Name:** Meklit Tensae
 - **Internship:** Future Interns: Data Science & Analytics Track (2026)

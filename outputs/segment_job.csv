@@ -1,0 +1,13 @@
+job,converted,total,conversion_rate_%,drop_off_%
+student,275,875,31.43,68.57
+retired,434,1720,25.23,74.77
+unemployed,144,1014,14.2,85.8
+admin.,1352,10422,12.97,87.03
+management,328,2924,11.22,88.78
+unknown,37,330,11.21,88.79
+technician,730,6743,10.83,89.17
+self-employed,149,1421,10.49,89.51
+housemaid,106,1060,10.0,90.0
+entrepreneur,124,1456,8.52,91.48
+services,323,3969,8.14,91.86
+blue-collar,638,9254,6.89,93.11

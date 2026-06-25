@@ -1,0 +1,4 @@
+poutcome,converted,total,conversion_rate_%,drop_off_%
+success,894,1373,65.11,34.89
+failure,605,4252,14.23,85.77
+nonexistent,3141,35563,8.83,91.17
